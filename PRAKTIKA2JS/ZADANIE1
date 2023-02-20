@@ -1,0 +1,13 @@
+<body>
+<script>
+st=prompt('x=');
+x=parseFloat(st);
+st=prompt('y=');
+y=parseFloat(st);
+z1=Math.abs(Math.pow(y,3)-Math.pow(x,2));
+z2=(Math.sqrt(7*x*y))/(1-2*Math.sqrt(x));
+z=z1-z2;
+st='z='+z;
+alert(st);
+</script>
+</body>
