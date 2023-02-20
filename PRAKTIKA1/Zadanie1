@@ -1,0 +1,10 @@
+<body> 
+<script>
+str=prompt("Введите цену за 1 кг яблок: ","0")
+x=parseInt(str)
+str=prompt("Сколько кг яблок хочет купить девочка? ", "0")
+y=parseInt(str)
+s=x*y
+alert("Цена яблок: "+s)
+</script>
+</body>
