@@ -1,0 +1,13 @@
+<body>
+<script>
+mm=new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+td=new Date(2023,4,1);
+g=td.getFullYear();
+m=td.getMonth();
+d=td.getDate();
+dn=td.getDay()
+dnn=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+alert(d+' '+mm[m]+' '+g+' '+dnn[dn]);
+</script>
+</body>
+
