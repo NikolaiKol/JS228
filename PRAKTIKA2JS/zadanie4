@@ -1,0 +1,9 @@
+<body>
+<script>
+var re = / /gi;
+str=prompt('Введите строку');
+var newstr = str.replace(re, '_');
+alert(newstr)
+</script>
+</body>
+
