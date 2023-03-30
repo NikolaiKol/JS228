@@ -1,0 +1,43 @@
+<html>
+<head>
+ <style>
+  table {
+   border-collapse: collapse;
+   margin: 0 auto;
+  }
+  td {
+   padding: 10px;
+  }
+  img {
+   display: block;
+   margin: 0 auto;
+   width: 300px;
+   height: 300px;
+   border: none;
+  }
+ </style>
+</head>
+<body>
+ <table>
+  <tr>
+   <td><img src="cat.jpg" id="image"></td>
+   <td><button onclick="toggleImage()">Спрятать</button></td>
+  </tr>
+ </table>
+
+ <script>
+  function toggleImage() {
+   var image = document.getElementById("image");
+   var button = document.querySelector("button");
+
+   if (image.style.display === "none") {
+    image.style.display = "block";
+    button.textContent = "Спрятать";
+   } else {
+    image.style.display = "none";
+    button.textContent = "Показать";
+   }
+  }
+ </script>
+</body>
+</html>
