@@ -1,0 +1,70 @@
+<html>
+<head>
+ <title>Проверка четности суммы цифр</title>
+ <style>
+  h3 {
+   background-color: #ffcc66;
+   text-align: center;
+   padding: 10px;
+  }
+  #even {
+  }
+  #odd {
+  }
+  #error {
+  }
+ </style>
+</head>
+<body>
+ <button onclick="start()">Start</button>
+ <button onclick="closeWindow()">Close</button>
+
+ <script>
+  var newWindow;
+
+  function start() {
+   var num = prompt("Введите целое трехзначное число:");
+   if (num.length !== 3 || isNaN(num)) {
+    showError();
+   } else {
+    var sum = parseInt(num.charAt(0)) + parseInt(num.charAt(1)) + parseInt(num.charAt(2));
+    if (sum % 2 === 0) {
+     showEven();
+    } else {
+     showOdd();
+    }
+   }
+  }
+
+  function showEven() {
+   newWindow = window.open("", "", "width=200,height=200");
+   newWindow.document.write("<h3 id='even'>Сумма цифр четная!</h3>");
+   newWindow.document.body.style.backgroundColor = "#66ff66";
+   newWindow.document.body.style.textAlign = "left";
+   newWindow.document.close();
+  }
+
+  function showOdd() {
+   newWindow = window.open("", "", "width=200,height=200");
+   newWindow.document.write("<h3 id='odd'>Сумма цифр нечетная!</h3>");
+   newWindow.document.body.style.backgroundColor = "#6666ff";
+   newWindow.document.body.style.textAlign = "right";
+   newWindow.document.close();
+  }
+
+  function showError() {
+   newWindow = window.open("", "", "width=200,height=200");
+   newWindow.document.write("<h3 id='error'>Введено не трехзначное число!</h3>");
+   newWindow.document.body.style.backgroundColor = "#ff6666";
+   newWindow.document.body.style.textAlign = "center";
+   newWindow.document.close();
+  }
+
+  function closeWindow() {
+   if (newWindow) {
+    newWindow.close();
+   }
+  }
+ </script>
+</body>
+</html>
