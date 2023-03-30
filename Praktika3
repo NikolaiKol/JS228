@@ -2,15 +2,15 @@
   <body>
     <button onclick="findZnak()">Найти "!"</button>
     <script>
-      var arr = ["Один,два!Три,четыре!"]; // задаем символьный массив
+      var arr = ["Один,два!Три,четыре!"];
 
       function findZnak() {
-        var index = -1; // инициализируем индекс последнего символа "!" значением -1
-        for (var i = 0; i < arr.length; i++) { // перебираем все элементы массива
-          var str = arr[i]; // получаем символьную строку из текущего элемента массива
-          var tempIndex = str.lastIndexOf("!"); // находим индекс последнего символа "!"
-          if (tempIndex > index) { // если индекс больше предыдущего найденного индекса
-            index = tempIndex; // сохраняем новый индекс
+        var index = -1; 
+        for (var i = 0; i < arr.length; i++) { 
+          var str = arr[i]; 
+          var tempIndex = str.lastIndexOf("!");
+          if (tempIndex > index) {
+            index = tempIndex; 
           }
         }
 
