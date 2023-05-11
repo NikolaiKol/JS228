@@ -1,0 +1,21 @@
+<body> 
+<script>
+   str=prompt("Введите A: ","0");
+   a=parseInt(str);
+   str1=prompt("Введите B: ","0");
+   b=parseInt(str1);
+   c = b
+   for (i=1; i<=a; i++) {
+    if (a%i == 0) { 
+     c--; 
+     if (c == 0) { 
+      alert("Число " + a + " имеет " + b + " делителей");
+	break
+     }
+    }
+   }
+   if (c != 0){
+     alert("Число " + a +" не имеет "+ b +" делителей");
+   }
+</script>
+</body>
