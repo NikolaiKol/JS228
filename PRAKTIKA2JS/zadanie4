@@ -1,9 +1,20 @@
 <body>
 <script>
-var re = / /gi;
 str=prompt('Введите строку');
-var newstr = str.replace(re, '_');
-alert(newstr)
+a = str.indexOf(",");
+b = str.substring(0,a).replace(/\s+/g, "_") + str.substring(a);;
+alert(b)
 </script>
 </body>
 
+///////////////////////////////////////
+str=prompt('Введите строку');
+for(i = 0; i < str.length; i++){
+	if (str[i] != ","){
+		newstr = str.replace(/\s+/g,"_");
+	}
+	else{
+		break;
+	} 
+}
+////////////////////////////////////////
