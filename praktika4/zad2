@@ -6,12 +6,6 @@
    text-align: center;
    padding: 10px;
   }
-  #even {
-  }
-  #odd {
-  }
-  #error {
-  }
  </style>
 </head>
 <body>
@@ -24,18 +18,18 @@
   function start() {
    var num = prompt("Введите целое трехзначное число:");
    if (num.length !== 3 || isNaN(num)) {
-    showError();
+    show3();
    } else {
     var sum = parseInt(num.charAt(0)) + parseInt(num.charAt(1)) + parseInt(num.charAt(2));
     if (sum % 2 === 0) {
-     showEven();
+     show1();
     } else {
-     showOdd();
+     show2();
     }
    }
   }
 
-  function showEven() {
+  function show1() {
    newWindow = window.open("", "", "width=200,height=200");
    newWindow.document.write("<h3 id='even'>Сумма цифр четная!</h3>");
    newWindow.document.body.style.backgroundColor = "#66ff66";
@@ -43,7 +37,7 @@
    newWindow.document.close();
   }
 
-  function showOdd() {
+  function show2() {
    newWindow = window.open("", "", "width=200,height=200");
    newWindow.document.write("<h3 id='odd'>Сумма цифр нечетная!</h3>");
    newWindow.document.body.style.backgroundColor = "#6666ff";
@@ -51,7 +45,7 @@
    newWindow.document.close();
   }
 
-  function showError() {
+  function show3() {
    newWindow = window.open("", "", "width=200,height=200");
    newWindow.document.write("<h3 id='error'>Введено не трехзначное число!</h3>");
    newWindow.document.body.style.backgroundColor = "#ff6666";
