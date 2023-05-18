@@ -1,0 +1,41 @@
+<html>
+<head>
+ <style type="text/css">
+  #bottom-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 50%;
+  }
+
+  #top-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%; 
+  }
+ </style>
+</head>
+<body>
+ <img id="bottom-image" src="1.jpg"> 
+ <img id="top-image" src="4.gif"> 
+
+ <script type="text/javascript">
+  var topImage = document.getElementById("top-image");
+  var windowHeight = window.innerHeight; 
+  var imageHeight = topImage.offsetHeight; 
+  var currentPosition = 0; 
+
+  function moveImage() { 
+   currentPosition += 5; 
+
+   if (currentPosition >= windowHeight - imageHeight) { 
+    clearInterval(interval1); // 
+   }
+   topImage.style.top = currentPosition + "px"; 
+  }
+
+  var interval1 = setInterval(moveImage, 50);
+ </script>
+</body>
+</html>
